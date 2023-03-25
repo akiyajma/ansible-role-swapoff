@@ -1,0 +1,19 @@
+---
+
+galaxy_info:
+  author: akiyama
+  role_name: swapoff
+  description: Configure swapoff.
+  license: Apache-2.0
+  company: none
+  min_ansible_version: "2.12"
+
+  platforms:
+    - name: Ubuntu
+      versions:
+        - all
+
+  galaxy_tags:
+    - swapoff
+
+dependencies: []

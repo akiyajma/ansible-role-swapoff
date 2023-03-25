@@ -1,0 +1,9 @@
+---
+
+- block:
+  - name: Init Configuration
+    ansible.builtin.import_tasks: init.yml
+    tags: init
+  - name: Generate Configuration
+    ansible.builtin.import_tasks: config.yml
+    tags: config
