@@ -4,9 +4,8 @@
   shell: swapoff -a
   when: swap_state.stdout != ''
 
-- name: Configure /etc/fstab
-  replace:
-    path: /etc/fstab
-    regexp: ([^\s]+\s+swap\s+.*)
-    replace: '# \1'
-  when: swap_state_in_fstab.stdout != '0'
+- name: Remove swap from fstab
+  lineinfile:
+    path: '/etc/fstab'
+    regexp: '\sswap\s'
+    state: 'absent'
